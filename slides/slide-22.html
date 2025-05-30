@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 22 - Appendix | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .reference-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: var(--shadow-light);
+        }
+        .reference-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .reference-item:last-child {
+            border-bottom: none;
+        }
+        .source-tag {
+            display: inline-block;
+            background: var(--cleartrip-blue);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .contact-card {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(0,0,0,0.1);
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+        .contact-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .thank-you {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            letter-spacing: -1px;
+        }
+        /* Responsive styles for references */
+        @media (max-width: 768px) {
+            .reference-section {
+                padding: 20px;
+            }
+            .contact-card {
+                padding: 30px 20px;
+            }
+            .thank-you {
+                font-size: 42px;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .two-column {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Appendix</h1>
+                    <p class="slide-subtitle">Data Sources & References</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="two-column">
+                    <div>
+                        <h3 class="fade-in">Market Research Sources</h3>
+                        <div class="reference-section fade-in delayed-1">
+                            <div class="reference-item">
+                                <span class="source-tag">REPORT</span>
+                                <strong>India Tourism Market Report</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">Market size: $78B (2023) → $131B (2030)</p>
+                                <p style="font-size: 12px; color: #666;">Mordor Intelligence, 2024</p>
+                            </div>
+                            <div class="reference-item">
+                                <span class="source-tag">ANALYSIS</span>
+                                <strong>Package Holiday Market Study</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">Revenue: $11.23B (2025) → $34.1B (2029)</p>
+                                <p style="font-size: 12px; color: #666;">CAGR: 8.27% (2026-2030)</p>
+                            </div>
+                            <div class="reference-item">
+                                <span class="source-tag">SURVEY</span>
+                                <strong>Consumer Behavior Research</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">Mastercard Travel Trends 2025</p>
+                                <p style="font-size: 12px; color: #666;">91% prioritize travel savings</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="fade-in delayed-1">Competitive Intelligence</h3>
+                        <div class="reference-section fade-in delayed-2">
+                            <div class="reference-item">
+                                <span class="source-tag">BENCHMARK</span>
+                                <strong>MakeMyTrip Analysis</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">60% OTA market share</p>
+                                <p style="font-size: 12px; color: #666;">Holiday revenue: ₹2,000 Cr annually</p>
+                            </div>
+                            <div class="reference-item">
+                                <span class="source-tag">INTERNAL</span>
+                                <strong>Cleartrip Performance Data</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">Jan-Apr 2025 metrics</p>
+                                <p style="font-size: 12px; color: #666;">98 packages, ₹82.56L GMV</p>
+                            </div>
+                            <div class="reference-item">
+                                <span class="source-tag">INDUSTRY</span>
+                                <strong>Market Segmentation Data</strong>
+                                <p style="font-size: 14px; margin: 5px 0;">Online: 36% | Offline: 64%</p>
+                                <p style="font-size: 12px; color: #666;">4,000+ travel agents PAN India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in delayed-3">
+                    <h2 class="thank-you">Thank You!</h2>
+                    <p style="font-size: 20px; margin-bottom: 30px; color: white; font-weight: 500;">
+                        Ready to transform Cleartrip into India's leading holiday platform
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" style="font-size: 20px; color: white;"></i>
+                            <span style="color: white; font-weight: 500;">holidays@cleartrip.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe" style="font-size: 20px; color: white;"></i>
+                            <span style="color: white; font-weight: 500;">cleartrip.com/holidays</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px; text-align: center; background: var(--cleartrip-light-grey);">
+                    <p style="font-size: 14px; color: #666;">
+                        <strong>Disclaimer:</strong> This presentation contains forward-looking statements based on current market conditions and assumptions.<br>
+                        Actual results may vary based on market dynamics and execution capabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-21.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 22 of 22</span>
+            <a href="../index.html" class="nav-button" id="next-button">
+                Back to Home <i class="fas fa-home"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

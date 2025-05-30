@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleartrip Holiday Business Strategy - Presentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpeg" href="images/cleartrip-logo.jpg">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Custom styles for index page */
+        .presentation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .slide-preview {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .slide-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .slide-number {
+            display: inline-block;
+            background: var(--cleartrip-orange);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .slide-preview h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--cleartrip-blue);
+        }
+        
+        .slide-preview p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+            margin: 0;
+        }
+        
+        .overview-section {
+            background: var(--cleartrip-light-grey);
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .overview-section h2 {
+            font-size: 36px;
+            color: var(--cleartrip-blue);
+            margin-bottom: 30px;
+        }
+        
+        .key-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+        }
+        
+        .stat-card .value {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--cleartrip-orange);
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="index-hero">
+        <div class="logo-container" style="position: fixed; top: 40px; right: 60px; z-index: 10;">
+            <img src="images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+        </div>
+        
+        <div class="index-content">
+            <h1 class="index-title fade-in">Cleartrip Holiday Business Strategy</h1>
+            <p class="index-subtitle fade-in delayed-1">Crafting Memorable Holiday Experiences</p>
+            <p class="large-text fade-in delayed-2" style="color: white; opacity: 0.9; margin-bottom: 40px;">
+                Transform Cleartrip into a leading holiday destination platform<br>
+                in India's rapidly growing ₹87,000 crore holiday market
+            </p>
+            <a href="slides/slide-1.html" class="start-button fade-in delayed-3">
+                Start Presentation <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Overview Section -->
+    <div class="overview-section">
+        <h2>Presentation Overview</h2>
+        <div class="key-stats">
+            <div class="stat-card scale-in delayed-1">
+                <div class="value">₹10 Cr</div>
+                <div class="label">Monthly Revenue Target</div>
+            </div>
+            <div class="stat-card scale-in delayed-2">
+                <div class="value">₹73,950 Cr</div>
+                <div class="label">Addressable Market</div>
+            </div>
+            <div class="stat-card scale-in delayed-3">
+                <div class="value">22</div>
+                <div class="label">Strategic Slides</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Slide Navigation Grid -->
+    <div class="presentation-grid">
+        <a href="slides/slide-1.html" class="slide-preview fade-in">
+            <span class="slide-number">1</span>
+            <h3>Executive Summary</h3>
+            <p>Strategic roadmap to transform Cleartrip into a market leader</p>
+        </a>
+        
+        <a href="slides/slide-2.html" class="slide-preview fade-in">
+            <span class="slide-number">2</span>
+            <h3>Market Overview</h3>
+            <p>India tourism market size and growth trajectory analysis</p>
+        </a>
+        
+        <a href="slides/slide-3.html" class="slide-preview fade-in">
+            <span class="slide-number">3</span>
+            <h3>Market Deep Dive</h3>
+            <p>₹87,000 crore opportunity with segmentation analysis</p>
+        </a>
+        
+        <a href="slides/slide-4.html" class="slide-preview fade-in">
+            <span class="slide-number">4</span>
+            <h3>Customer Behavior</h3>
+            <p>Understanding the modern Indian traveler</p>
+        </a>
+        
+        <a href="slides/slide-5.html" class="slide-preview fade-in">
+            <span class="slide-number">5</span>
+            <h3>Market Pyramid</h3>
+            <p>Strategic customer targeting across segments</p>
+        </a>
+        
+        <a href="slides/slide-6.html" class="slide-preview fade-in">
+            <span class="slide-number">6</span>
+            <h3>Competitive Landscape</h3>
+            <p>Market position and competitive dynamics</p>
+        </a>
+        
+        <a href="slides/slide-7.html" class="slide-preview fade-in">
+            <span class="slide-number">7</span>
+            <h3>Current Performance</h3>
+            <p>Where Cleartrip stands today</p>
+        </a>
+        
+        <a href="slides/slide-8.html" class="slide-preview fade-in">
+            <span class="slide-number">8</span>
+            <h3>Process Gaps</h3>
+            <p>Operational complexity analysis</p>
+        </a>
+        
+        <a href="slides/slide-9.html" class="slide-preview fade-in">
+            <span class="slide-number">9</span>
+            <h3>Short Term Strategy</h3>
+            <p>0-6 months immediate action plan</p>
+        </a>
+        
+        <a href="slides/slide-10.html" class="slide-preview fade-in">
+            <span class="slide-number">10</span>
+            <h3>Mid Term Strategy</h3>
+            <p>6-12 months scaling initiatives</p>
+        </a>
+        
+        <a href="slides/slide-11.html" class="slide-preview fade-in">
+            <span class="slide-number">11</span>
+            <h3>Long Term Vision</h3>
+            <p>12+ months technology leadership</p>
+        </a>
+        
+        <a href="slides/slide-12.html" class="slide-preview fade-in">
+            <span class="slide-number">12</span>
+            <h3>Target Audience</h3>
+            <p>Understanding our customers</p>
+        </a>
+        
+        <a href="slides/slide-13.html" class="slide-preview fade-in">
+            <span class="slide-number">13</span>
+            <h3>Differentiation</h3>
+            <p>Creating unique value proposition</p>
+        </a>
+        
+        <a href="slides/slide-14.html" class="slide-preview fade-in">
+            <span class="slide-number">14</span>
+            <h3>Marketing Strategy</h3>
+            <p>Multi-channel growth approach</p>
+        </a>
+        
+        <a href="slides/slide-15.html" class="slide-preview fade-in">
+            <span class="slide-number">15</span>
+            <h3>Operational Excellence</h3>
+            <p>Building scalable operations</p>
+        </a>
+        
+        <a href="slides/slide-16.html" class="slide-preview fade-in">
+            <span class="slide-number">16</span>
+            <h3>Financial Projections</h3>
+            <p>Revenue model and growth targets</p>
+        </a>
+        
+        <a href="slides/slide-17.html" class="slide-preview fade-in">
+            <span class="slide-number">17</span>
+            <h3>Technology Roadmap</h3>
+            <p>Digital transformation strategy</p>
+        </a>
+        
+        <a href="slides/slide-18.html" class="slide-preview fade-in">
+            <span class="slide-number">18</span>
+            <h3>Risk Management</h3>
+            <p>Strategic risk analysis</p>
+        </a>
+        
+        <a href="slides/slide-19.html" class="slide-preview fade-in">
+            <span class="slide-number">19</span>
+            <h3>Success Metrics</h3>
+            <p>KPIs and performance tracking</p>
+        </a>
+        
+        <a href="slides/slide-20.html" class="slide-preview fade-in">
+            <span class="slide-number">20</span>
+            <h3>Implementation Timeline</h3>
+            <p>24-month execution plan</p>
+        </a>
+        
+        <a href="slides/slide-21.html" class="slide-preview fade-in">
+            <span class="slide-number">21</span>
+            <h3>Call to Action</h3>
+            <p>Immediate next steps</p>
+        </a>
+        
+        <a href="slides/slide-22.html" class="slide-preview fade-in">
+            <span class="slide-number">22</span>
+            <h3>Appendix</h3>
+            <p>Data sources and references</p>
+        </a>
+    </div>
+    
+    <!-- Footer Navigation -->
+    <div class="nav-footer">
+        <button class="nav-button secondary" id="present-button">
+            <i class="fas fa-expand"></i> Present Fullscreen
+        </button>
+        <a href="slides/slide-1.html" class="nav-button">
+            Start Presentation <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <script src="js/navigation.js"></script>
+</body>
+</html> 

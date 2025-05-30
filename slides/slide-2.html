@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 2 - Market Overview | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">India Tourism Market Overview</h1>
+                    <p class="slide-subtitle">Market Size & Growth Trajectory</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="info-card fade-in" style="margin-bottom: 40px; text-align: center;">
+                    <h2>Current Market Statistics (2024-2025)</h2>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <div class="chart-container fade-in delayed-1">
+                            <canvas id="market-growth-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="metric-box scale-in delayed-1" style="margin-bottom: 20px;">
+                            <div class="metric-value" data-value="78" data-prefix="$" data-suffix="B">0</div>
+                            <div class="metric-label">2023 Market Value</div>
+                        </div>
+                        
+                        <div class="metric-box scale-in delayed-2" style="background: var(--gradient-secondary); margin-bottom: 20px;">
+                            <div class="metric-value" data-value="131" data-prefix="$" data-suffix="B">0</div>
+                            <div class="metric-label">2030 Projected Value</div>
+                        </div>
+                        
+                        <div class="info-card scale-in delayed-3">
+                            <h3><i class="fas fa-chart-line" style="color: var(--cleartrip-orange);"></i> Package Holiday Market</h3>
+                            <p><strong>2025:</strong> $11.23 billion USD</p>
+                            <p><strong>2029:</strong> $34.1 billion USD</p>
+                            <p><strong>CAGR:</strong> <span class="highlight">8.27%</span> (2026-2030)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="three-column" style="margin-top: 40px;">
+                    <div class="info-card fade-in delayed-3">
+                        <div class="icon primary">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Key Demographics</h3>
+                        <p>Rising disposable incomes</p>
+                        <p><strong>Median age: 28 years</strong></p>
+                    </div>
+                    
+                    <div class="info-card fade-in delayed-3">
+                        <div class="icon secondary">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Online Penetration</h3>
+                        <p><strong>64%</strong> of package holiday revenue will be online by 2029</p>
+                        <p>Market: <strong>$33.56B by 2032</strong></p>
+                    </div>
+                    
+                    <div class="info-card fade-in delayed-3">
+                        <div class="icon primary">
+                            <i class="fas fa-plane-arrival"></i>
+                        </div>
+                        <h3>International Arrivals</h3>
+                        <p><strong>18.89M</strong> (2023)</p>
+                        <p>Target: <strong>30.5M by 2028</strong></p>
+                    </div>
+                </div>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px; background: var(--cleartrip-light-grey); text-align: center;">
+                    <h3>Government Initiatives Driving Growth</h3>
+                    <p class="large-text">"Incredible India" • Swadesh Darshan 2.0 • Visa Simplification • Infrastructure Development</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-1.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 2 of 22</span>
+            <a href="slide-3.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html> 

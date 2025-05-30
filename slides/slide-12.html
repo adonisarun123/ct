@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 12 - Target Audience | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .persona-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .persona-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        .persona-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+        .persona-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .persona-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--cleartrip-light-grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--cleartrip-orange);
+        }
+        .stat-highlight {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--cleartrip-orange);
+            margin: 10px 0;
+        }
+        .motivation-tag {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .motivation-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        /* Different colors for different tag categories */
+        .tag-culture {
+            background: #3498DB;
+            color: white;
+        }
+        .tag-experience {
+            background: #E74C3C;
+            color: white;
+        }
+        .tag-sustainable {
+            background: #2ECC71;
+            color: white;
+        }
+        .tag-social {
+            background: #9B59B6;
+            color: white;
+        }
+        .tag-local {
+            background: var(--cleartrip-orange);
+            color: white;
+        }
+        .tag-wellness {
+            background: #1ABC9C;
+            color: white;
+        }
+        .tag-adventure {
+            background: #F39C12;
+            color: white;
+        }
+        .tag-food {
+            background: #E67E22;
+            color: white;
+        }
+        .tag-festival {
+            background: #E91E63;
+            color: white;
+        }
+        .tag-solo {
+            background: #34495E;
+            color: white;
+        }
+        .priority-marker {
+            background: var(--cleartrip-orange);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Target Audience & Consumer Behavior</h1>
+                    <p class="slide-subtitle">Understanding Our Customers</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <h3 class="fade-in">Primary Segments</h3>
+                
+                <div class="three-column" style="margin-top: 30px;">
+                    <div class="persona-card fade-in delayed-1">
+                        <span class="priority-marker">PRIMARY</span>
+                        <div class="persona-header">
+                            <div class="persona-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div>
+                                <h4>Gen Z & Millennials</h4>
+                                <p style="font-size: 14px; color: #666;">22-40 years</p>
+                            </div>
+                        </div>
+                        <div class="stat-highlight">91%</div>
+                        <p style="font-size: 14px; margin-bottom: 15px;">Emphasize saving for travel goals</p>
+                        <ul style="font-size: 14px; padding-left: 20px;">
+                            <li>64% trust online information</li>
+                            <li>81% support local brands</li>
+                            <li>Experience-driven motivations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="persona-card fade-in delayed-2">
+                        <div class="persona-header">
+                            <div class="persona-icon" style="color: var(--cleartrip-blue);">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div>
+                                <h4>Family Travelers</h4>
+                                <p style="font-size: 14px; color: #666;">All age groups</p>
+                            </div>
+                        </div>
+                        <div class="stat-highlight">58%</div>
+                        <p style="font-size: 14px; margin-bottom: 15px;">Planning multi-generational trips</p>
+                        <ul style="font-size: 14px; padding-left: 20px;">
+                            <li>53% double occupancy preference</li>
+                            <li>Safety & convenience priorities</li>
+                            <li>Value for money seekers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="persona-card fade-in delayed-3">
+                        <div class="persona-header">
+                            <div class="persona-icon" style="color: #2ECC71;">
+                                <i class="fas fa-suitcase"></i>
+                            </div>
+                            <div>
+                                <h4>Weekend Getaway</h4>
+                                <p style="font-size: 14px; color: #666;">Urban professionals</p>
+                            </div>
+                        </div>
+                        <div class="stat-highlight">74%</div>
+                        <p style="font-size: 14px; margin-bottom: 15px;">Prioritize domestic exploration</p>
+                        <ul style="font-size: 14px; padding-left: 20px;">
+                            <li>Short-duration packages</li>
+                            <li>Quick booking decisions</li>
+                            <li>Mobile-first behavior</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px; background: var(--cleartrip-light-grey);">
+                    <h3 style="text-align: center; margin-bottom: 20px;"><i class="fas fa-compass" style="color: var(--cleartrip-orange);"></i> Travel Motivations 2025</h3>
+                    <div style="text-align: center;">
+                        <span class="motivation-tag tag-culture">Cultural Exploration</span>
+                        <span class="motivation-tag tag-experience">Authentic Experiences</span>
+                        <span class="motivation-tag tag-sustainable">Sustainable Tourism</span>
+                        <span class="motivation-tag tag-social">Social Media Shareability</span>
+                        <span class="motivation-tag tag-local">Local Business Support (73%)</span>
+                        <span class="motivation-tag tag-wellness">Wellness & Relaxation</span>
+                        <span class="motivation-tag tag-adventure">Adventure & Activities</span>
+                        <span class="motivation-tag tag-food">Food Tourism</span>
+                        <span class="motivation-tag tag-festival">Festival Travel</span>
+                        <span class="motivation-tag tag-solo">Solo Exploration</span>
+                    </div>
+                </div>
+                
+                <div class="two-column" style="margin-top: 30px;">
+                    <div class="info-card fade-in delayed-3">
+                        <h4><i class="fas fa-chart-pie" style="color: var(--cleartrip-blue);"></i> Booking Behavior Insights</h4>
+                        <div style="margin-top: 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0;">
+                                <span>Research Phase</span>
+                                <strong>2-3 weeks</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0;">
+                                <span>Price Comparison</span>
+                                <strong>4-5 platforms</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0;">
+                                <span>Mobile Bookings</span>
+                                <strong>67% users</strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0;">
+                                <span>Review Influence</span>
+                                <strong>82% check reviews</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card fade-in delayed-3">
+                        <h4><i class="fas fa-star" style="color: var(--cleartrip-orange);"></i> Customer Expectations</h4>
+                        <ul style="font-size: 14px; padding-left: 20px; margin-top: 15px;">
+                            <li><strong>Transparent Pricing</strong> - No hidden costs</li>
+                            <li><strong>Instant Confirmation</strong> - Real-time booking</li>
+                            <li><strong>24/7 Support</strong> - Emergency assistance</li>
+                            <li><strong>Flexible Cancellation</strong> - COVID impact</li>
+                            <li><strong>Local Experiences</strong> - Authentic activities</li>
+                            <li><strong>Personalization</strong> - Tailored recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-11.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 12 of 22</span>
+            <a href="slide-13.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 18 - Risk Management | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .risk-matrix {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-medium);
+            margin: 20px 0;
+        }
+        .risk-item {
+            display: grid;
+            grid-template-columns: 1fr 3fr 3fr;
+            gap: 20px;
+            padding: 20px;
+            margin: 10px 0;
+            background: var(--cleartrip-light-grey);
+            border-radius: 8px;
+            align-items: center;
+        }
+        .risk-level {
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .risk-high {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        .risk-medium {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        .risk-low {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        .mitigation-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .step-number {
+            width: 24px;
+            height: 24px;
+            background: var(--cleartrip-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .risk-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border-radius: 12px;
+        }
+        .icon-high {
+            background: #FFEBEE;
+            color: #C62828;
+        }
+        .icon-medium {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        .icon-low {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Risk Management & Mitigation Strategy</h1>
+                    <p class="slide-subtitle">Strategic Risk Analysis</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <h3 class="fade-in">Key Risk Areas & Mitigation Plans</h3>
+                
+                <div class="risk-matrix fade-in delayed-1">
+                    <div class="risk-item">
+                        <div class="text-center">
+                            <div class="risk-icon icon-high">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <span class="risk-level risk-high">HIGH RISK</span>
+                        </div>
+                        <div>
+                            <h4>Market Competition</h4>
+                            <p style="font-size: 14px;">MakeMyTrip's 60% market dominance and established brand presence</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--cleartrip-blue);">Mitigation Strategy:</strong>
+                            <div class="mitigation-step">
+                                <span class="step-number">1</span>
+                                <p style="font-size: 13px;">Focus on underserved segments and niche markets</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">2</span>
+                                <p style="font-size: 13px;">Leverage Cleartrip's tech heritage for superior UX</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">3</span>
+                                <p style="font-size: 13px;">Competitive pricing with transparency</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="text-center">
+                            <div class="risk-icon icon-high">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <span class="risk-level risk-high">HIGH RISK</span>
+                        </div>
+                        <div>
+                            <h4>Operational Complexity</h4>
+                            <p style="font-size: 14px;">Managing multiple stakeholders, inventory, and real-time operations</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--cleartrip-blue);">Mitigation Strategy:</strong>
+                            <div class="mitigation-step">
+                                <span class="step-number">1</span>
+                                <p style="font-size: 13px;">Invest in robust technology infrastructure</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">2</span>
+                                <p style="font-size: 13px;">Automate key processes and workflows</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">3</span>
+                                <p style="font-size: 13px;">Build experienced operations team</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="text-center">
+                            <div class="risk-icon icon-medium">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <span class="risk-level risk-medium">MEDIUM RISK</span>
+                        </div>
+                        <div>
+                            <h4>Partner Dependencies</h4>
+                            <p style="font-size: 14px;">Reliance on DMCs and travel partners for inventory and services</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--cleartrip-blue);">Mitigation Strategy:</strong>
+                            <div class="mitigation-step">
+                                <span class="step-number">1</span>
+                                <p style="font-size: 13px;">Diversify partner portfolio across regions</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">2</span>
+                                <p style="font-size: 13px;">Build direct contracting capabilities</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">3</span>
+                                <p style="font-size: 13px;">Implement partner performance metrics</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <div class="text-center">
+                            <div class="risk-icon icon-low">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span class="risk-level risk-low">LOW RISK</span>
+                        </div>
+                        <div>
+                            <h4>Market Demand</h4>
+                            <p style="font-size: 14px;">Growing travel market with strong fundamentals</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--cleartrip-blue);">Mitigation Strategy:</strong>
+                            <div class="mitigation-step">
+                                <span class="step-number">1</span>
+                                <p style="font-size: 13px;">Monitor market trends continuously</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">2</span>
+                                <p style="font-size: 13px;">Maintain flexible product portfolio</p>
+                            </div>
+                            <div class="mitigation-step">
+                                <span class="step-number">3</span>
+                                <p style="font-size: 13px;">Quick adaptation to consumer preferences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="two-column" style="margin-top: 30px;">
+                    <div class="info-card fade-in delayed-3">
+                        <h4><i class="fas fa-shield-alt" style="color: var(--cleartrip-orange);"></i> Business Continuity Plan</h4>
+                        <ul style="font-size: 14px; padding-left: 20px;">
+                            <li>24/7 customer support infrastructure</li>
+                            <li>Multi-location operational teams</li>
+                            <li>Cloud-based technology stack</li>
+                            <li>Comprehensive travel insurance options</li>
+                            <li>Crisis management protocols</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card fade-in delayed-3">
+                        <h4><i class="fas fa-balance-scale" style="color: var(--cleartrip-blue);"></i> Regulatory Compliance</h4>
+                        <ul style="font-size: 14px; padding-left: 20px;">
+                            <li>Travel agent licensing requirements</li>
+                            <li>GST and tax compliance</li>
+                            <li>Consumer protection guidelines</li>
+                            <li>Data privacy regulations</li>
+                            <li>International travel norms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-17.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 18 of 22</span>
+            <a href="slide-19.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

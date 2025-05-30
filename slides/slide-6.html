@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 6 - Competitive Landscape | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .competition-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+        .competition-table th {
+            background: var(--cleartrip-blue);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 500;
+        }
+        .competition-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        .competition-table tr:hover {
+            background: var(--cleartrip-light-grey);
+        }
+        .check {
+            color: #2ECC71;
+            font-size: 20px;
+        }
+        .cross {
+            color: #E74C3C;
+            font-size: 20px;
+        }
+        .market-share-card {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Competitive Landscape Analysis</h1>
+                    <p class="slide-subtitle">Market Position & Competitive Dynamics</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="two-column">
+                    <div>
+                        <h3 class="fade-in">Online Travel Agency Market Share</h3>
+                        <div class="info-card fade-in delayed-1">
+                            <div class="market-share-card">
+                                <h2 style="color: white; margin-bottom: 10px;">MakeMyTrip</h2>
+                                <p style="font-size: 48px; font-weight: 900; margin: 10px 0;">60%</p>
+                                <p>Market Dominance</p>
+                                <p style="font-size: 14px; opacity: 0.9;">$7.25B revenue (9M FY25)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card fade-in delayed-2" style="margin-top: 20px;">
+                            <h4>Other Key Players</h4>
+                            <ul style="font-size: 14px;">
+                                <li><strong>International:</strong> Booking.com, Expedia, Agoda</li>
+                                <li><strong>Domestic:</strong> Yatra, EaseMyTrip, Via.com</li>
+                                <li><strong>Cleartrip:</strong> Part of Flipkart ecosystem</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="chart-container fade-in delayed-2" style="height: 350px;">
+                            <canvas id="market-share-pie"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="fade-in delayed-3" style="margin-top: 40px;">Holiday Package Component Analysis</h3>
+                
+                <table class="competition-table fade-in delayed-3">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>MakeMyTrip</th>
+                            <th>Paytm</th>
+                            <th>Cleartrip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Air Tickets</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                            <td><i class="fas fa-check check"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Hotels</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-check check"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Ground Transfer</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Activities</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Visa Services</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Insurance</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Forex</td>
+                            <td><i class="fas fa-check check"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                            <td><i class="fas fa-times cross"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px; background: var(--cleartrip-light-grey); text-align: center;">
+                    <h3><i class="fas fa-exclamation-triangle" style="color: var(--cleartrip-orange);"></i> Cleartrip's Current Gap</h3>
+                    <p class="large-text">Limited holiday ecosystem vs comprehensive competitors</p>
+                    <p>Opportunity to build complete holiday package offerings</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-5.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 6 of 22</span>
+            <a href="slide-7.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Market Share Pie Chart
+        const ctx = document.getElementById('market-share-pie');
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['MakeMyTrip', 'International Players', 'Other Domestic', 'Cleartrip'],
+                    datasets: [{
+                        data: [60, 25, 14.5, 0.5],
+                        backgroundColor: [
+                            '#E15A2B',
+                            '#2B6CB0',
+                            '#95a5a6',
+                            '#F47548'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

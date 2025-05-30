@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 20 - Implementation Timeline | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .timeline-container {
+            position: relative;
+            margin: 40px 0;
+            padding: 20px 60px;
+        }
+        .timeline-track {
+            position: relative;
+            height: 80px;
+            background: var(--cleartrip-light-grey);
+            border-radius: 40px;
+            margin: 60px 0;
+            overflow: visible;
+        }
+        .timeline-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 40px;
+            transition: width 2s ease-out;
+        }
+        .timeline-milestone {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 4px solid var(--cleartrip-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: var(--shadow-medium);
+            z-index: 2;
+        }
+        .timeline-milestone:first-of-type {
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .timeline-milestone:last-of-type {
+            right: 0;
+            left: auto;
+            transform: translateY(-50%);
+        }
+        .timeline-milestone:not(:first-of-type):not(:last-of-type) {
+            transform: translate(-50%, -50%);
+        }
+        .milestone-label {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--cleartrip-blue);
+        }
+        .milestone-detail {
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            width: 120px;
+        }
+        .timeline-milestone:first-of-type .milestone-label,
+        .timeline-milestone:first-of-type .milestone-detail {
+            left: 25px;
+        }
+        .timeline-milestone:last-of-type .milestone-label,
+        .timeline-milestone:last-of-type .milestone-detail {
+            left: auto;
+            right: 25px;
+            transform: translateX(50%);
+        }
+        .phase-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 15px 0;
+            box-shadow: var(--shadow-light);
+            border-left: 5px solid var(--cleartrip-orange);
+        }
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .phase-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--cleartrip-blue);
+        }
+        .phase-duration {
+            background: var(--cleartrip-light-grey);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .deliverable {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        .deliverable-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--cleartrip-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Implementation Timeline</h1>
+                    <p class="slide-subtitle">24-Month Execution Plan</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="timeline-container fade-in">
+                    <h3 style="text-align: center; margin-bottom: 30px;">Project Milestones</h3>
+                    <div class="timeline-track">
+                        <div class="timeline-progress fade-in delayed-1" style="width: 100%;"></div>
+                        
+                        <div class="timeline-milestone">
+                            <span>0</span>
+                            <div class="milestone-label">START</div>
+                            <div class="milestone-detail">Project Kickoff</div>
+                        </div>
+                        
+                        <div class="timeline-milestone" style="left: 25%;">
+                            <span>6</span>
+                            <div class="milestone-label">FOUNDATION</div>
+                            <div class="milestone-detail">Platform Launch</div>
+                        </div>
+                        
+                        <div class="timeline-milestone" style="left: 50%;">
+                            <span>12</span>
+                            <div class="milestone-label">GROWTH</div>
+                            <div class="milestone-detail">₹5 Cr Revenue</div>
+                        </div>
+                        
+                        <div class="timeline-milestone" style="left: 75%;">
+                            <span>18</span>
+                            <div class="milestone-label">SCALE</div>
+                            <div class="milestone-detail">Break-even</div>
+                        </div>
+                        
+                        <div class="timeline-milestone">
+                            <span>24</span>
+                            <div class="milestone-label">TARGET</div>
+                            <div class="milestone-detail">₹10 Cr/Month</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="two-column" style="margin-top: 40px;">
+                    <div>
+                        <div class="phase-card fade-in delayed-2">
+                            <div class="phase-header">
+                                <span class="phase-title">Phase 1: Foundation</span>
+                                <span class="phase-duration">Months 1-6</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Team recruitment & training</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Platform MVP development</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Initial DMC partnerships</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>200+ packages curated</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Marketing campaign launch</span>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-card fade-in delayed-3">
+                            <div class="phase-header">
+                                <span class="phase-title">Phase 2: Growth</span>
+                                <span class="phase-duration">Months 7-12</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Process optimization</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>AI/ML integration</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>500+ package portfolio</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Mobile app launch</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon">✓</div>
+                                <span>Regional expansion</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="phase-card fade-in delayed-2" style="border-left-color: var(--cleartrip-blue);">
+                            <div class="phase-header">
+                                <span class="phase-title">Phase 3: Scale</span>
+                                <span class="phase-duration">Months 13-18</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: var(--cleartrip-blue);">✓</div>
+                                <span>International packages focus</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: var(--cleartrip-blue);">✓</div>
+                                <span>Direct contracting model</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: var(--cleartrip-blue);">✓</div>
+                                <span>Premium segment entry</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: var(--cleartrip-blue);">✓</div>
+                                <span>Loyalty program launch</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: var(--cleartrip-blue);">✓</div>
+                                <span>Break-even achievement</span>
+                            </div>
+                        </div>
+                        
+                        <div class="phase-card fade-in delayed-3" style="border-left-color: #2ECC71;">
+                            <div class="phase-header">
+                                <span class="phase-title">Phase 4: Leadership</span>
+                                <span class="phase-duration">Months 19-24</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: #2ECC71;">✓</div>
+                                <span>1000+ packages live</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: #2ECC71;">✓</div>
+                                <span>AR/VR integration</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: #2ECC71;">✓</div>
+                                <span>Voice booking feature</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: #2ECC71;">✓</div>
+                                <span>2% market share</span>
+                            </div>
+                            <div class="deliverable">
+                                <div class="deliverable-icon" style="background: #2ECC71;">✓</div>
+                                <span>₹10 Cr monthly revenue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metric-box fade-in delayed-3" style="margin-top: 30px; text-align: center;">
+                    <h3 style="color: white;">Success Criteria</h3>
+                    <p style="font-size: 18px; margin-top: 20px;">
+                        Transform Cleartrip into a Top 3 holiday platform in India with<br>
+                        sustainable profitability and exceptional customer experience
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-19.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 20 of 22</span>
+            <a href="slide-21.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

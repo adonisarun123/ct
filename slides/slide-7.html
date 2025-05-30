@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 7 - Current Performance | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .performance-table {
+            width: 100%;
+            margin: 30px 0;
+        }
+        .performance-table th {
+            background: var(--cleartrip-blue);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .performance-table td {
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .performance-table tr:nth-child(even) {
+            background: var(--cleartrip-light-grey);
+        }
+        .growth-positive {
+            color: #2ECC71;
+        }
+        .growth-negative {
+            color: #E74C3C;
+        }
+        .challenge-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: #fff;
+            border-left: 4px solid var(--cleartrip-orange);
+            border-radius: 4px;
+            box-shadow: var(--shadow-light);
+        }
+        
+        /* Process Flow Styles */
+        .process-flow-container {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow-medium);
+            overflow-x: auto;
+        }
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 350px;
+        }
+        .flow-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .flow-step {
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            position: relative;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        .flow-step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        /* Color coding for different entities */
+        .step-ct {
+            background: var(--cleartrip-orange);
+        }
+        .step-birbal {
+            background: #9B59B6;
+        }
+        .step-customer {
+            background: #3498DB;
+        }
+        .step-thomas {
+            background: #E74C3C;
+        }
+        .flow-arrow {
+            color: #7F8C8D;
+            font-size: 20px;
+            margin: 0 5px;
+        }
+        .flow-arrow-down {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin: 5px 0;
+            align-self: center;
+        }
+        .process-legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Cleartrip Current Performance</h1>
+                    <p class="slide-subtitle">Where We Stand Today</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="info-card fade-in" style="background: var(--gradient-primary); color: white; text-align: center; margin-bottom: 30px;">
+                    <h2 style="color: white;">Current Market Position</h2>
+                    <div class="two-column" style="margin-top: 20px;">
+                        <div>
+                            <p style="font-size: 36px; font-weight: 900;">&lt;0.5%</p>
+                            <p>Market Share</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 36px; font-weight: 900;">₹10 Cr</p>
+                            <p>Monthly Target</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="fade-in delayed-1">Monthly Performance (Jan-Apr 2025)</h3>
+                
+                <table class="data-table performance-table fade-in delayed-1">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Packages Sold</th>
+                            <th>GMV (₹)</th>
+                            <th>Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>14</td>
+                            <td>₹7,84,000</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>19</td>
+                            <td>₹13,49,000</td>
+                            <td class="growth-positive">+72%</td>
+                        </tr>
+                        <tr>
+                            <td>March</td>
+                            <td>36</td>
+                            <td>₹36,00,000</td>
+                            <td class="growth-positive">+167%</td>
+                        </tr>
+                        <tr>
+                            <td>April</td>
+                            <td>29</td>
+                            <td>₹25,23,000</td>
+                            <td class="growth-negative">-30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="chart-container fade-in delayed-2" style="height: 300px; margin-top: 30px;">
+                    <canvas id="performance-chart"></canvas>
+                </div>
+                
+                <div class="two-column" style="margin-top: 40px;">
+                    <div>
+                        <h3 class="fade-in delayed-3">Current Challenges</h3>
+                        <div class="challenge-item fade-in delayed-3">
+                            <i class="fas fa-map-marked-alt" style="color: var(--cleartrip-orange);"></i>
+                            <strong> Limited Destinations</strong>
+                            <p style="font-size: 14px; margin-top: 5px;">Portfolio gaps vs market demand</p>
+                        </div>
+                        <div class="challenge-item fade-in delayed-3">
+                            <i class="fas fa-dollar-sign" style="color: var(--cleartrip-orange);"></i>
+                            <strong> Pricing Competitiveness</strong>
+                            <p style="font-size: 14px; margin-top: 5px;">Need better negotiated rates</p>
+                        </div>
+                        <div class="challenge-item fade-in delayed-3">
+                            <i class="fas fa-puzzle-piece" style="color: var(--cleartrip-orange);"></i>
+                            <strong> Incomplete Experience</strong>
+                            <p style="font-size: 14px; margin-top: 5px;">Missing key components</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="fade-in delayed-3">Complex Business Flow</h3>
+                        <div class="process-flow-container fade-in delayed-3">
+                            <h4 style="text-align: center; margin-bottom: 20px; color: var(--cleartrip-blue);">
+                                <i class="fas fa-exchange-alt"></i> 7-Step Process with Multiple Handoffs
+                            </h4>
+                            <div class="process-flow">
+                                <!-- Step 1-3 -->
+                                <div class="flow-row">
+                                    <div class="flow-step step-ct">CT Platform</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-ct">Lead Generation</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-birbal">Birbal Team</div>
+                                </div>
+                                
+                                <div style="text-align: center;">
+                                    <span class="flow-arrow flow-arrow-down">↓</span>
+                                </div>
+                                
+                                <!-- Step 4-6 -->
+                                <div class="flow-row">
+                                    <div class="flow-step step-customer">Customer Experience</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-birbal">Confirmation</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-thomas">Thomas Cook</div>
+                                </div>
+                                
+                                <div style="text-align: center;">
+                                    <span class="flow-arrow flow-arrow-down">↓</span>
+                                </div>
+                                
+                                <!-- Step 7-9 -->
+                                <div class="flow-row">
+                                    <div class="flow-step step-thomas">Voucher Generation</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-customer">Customer</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-thomas">Thomas Cook</div>
+                                </div>
+                                
+                                <div style="text-align: center;">
+                                    <span class="flow-arrow flow-arrow-down">↓</span>
+                                </div>
+                                
+                                <!-- Step 10-12 -->
+                                <div class="flow-row">
+                                    <div class="flow-step step-birbal">Birbal Payment</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-ct">CT Payment Link</div>
+                                    <span class="flow-arrow">→</span>
+                                    <div class="flow-step step-customer">Customer Payment</div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--cleartrip-orange);"></div>
+                                    <span>Cleartrip</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #9B59B6;"></div>
+                                    <span>Birbal</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #3498DB;"></div>
+                                    <span>Customer</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #E74C3C;"></div>
+                                    <span>Thomas Cook</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="metric-box fade-in delayed-3" style="margin-top: 30px; text-align: center;">
+                    <h3 style="color: white; margin-bottom: 20px;">Target Transformation</h3>
+                    <div style="font-size: 24px;">
+                        <span style="font-weight: 900;">1,000 packages</span> × <span style="font-weight: 900;">₹1L AOV</span> = <span style="font-weight: 900;">₹10 crore monthly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-6.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 7 of 22</span>
+            <a href="slide-8.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html> 

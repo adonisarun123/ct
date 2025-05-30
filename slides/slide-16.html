@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 16 - Financial Projections | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .revenue-stream {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-light);
+            border-top: 4px solid var(--cleartrip-orange);
+        }
+        .revenue-stream h4 {
+            color: var(--cleartrip-blue);
+            margin-bottom: 15px;
+        }
+        .investment-card {
+            background: var(--cleartrip-light-grey);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .investment-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--cleartrip-orange);
+        }
+        .breakeven-timeline {
+            background: linear-gradient(to right, #E15A2B 0%, #E15A2B 75%, #2B6CB0 75%, #2B6CB0 100%);
+            height: 8px;
+            border-radius: 4px;
+            position: relative;
+            margin: 30px 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border: 3px solid var(--cleartrip-orange);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">Financial Projections & Investment</h1>
+                    <p class="slide-subtitle">Revenue Model & Growth Targets</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="two-column">
+                    <div>
+                        <h3 class="fade-in">Revenue Streams</h3>
+                        
+                        <div class="revenue-stream fade-in delayed-1">
+                            <h4><i class="fas fa-suitcase"></i> Package Bookings (Primary)</h4>
+                            <p><strong>Commission:</strong> 8-12% per booking</p>
+                            <p><strong>Target:</strong> 1,000 packages/month × ₹1L</p>
+                            <p class="highlight" style="font-size: 20px; margin-top: 10px;">= ₹10 Cr monthly</p>
+                        </div>
+                        
+                        <div class="revenue-stream fade-in delayed-2">
+                            <h4><i class="fas fa-plus-circle"></i> Add-on Services (Secondary)</h4>
+                            <ul style="font-size: 14px; padding-left: 20px;">
+                                <li>Visa assistance - ₹500-2000/application</li>
+                                <li>Travel insurance - 5-8% commission</li>
+                                <li>Airport transfers - ₹200-500/booking</li>
+                                <li>Activity bookings - 10-15% commission</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="revenue-stream fade-in delayed-3">
+                            <h4><i class="fas fa-star"></i> Premium Services (Future)</h4>
+                            <ul style="font-size: 14px; padding-left: 20px;">
+                                <li>Customized packages - 15-20% premium</li>
+                                <li>Concierge services - ₹5000+/trip</li>
+                                <li>Group tour management - Fixed fee model</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="fade-in">Investment Requirements</h3>
+                        
+                        <div class="info-card fade-in delayed-1">
+                            <div class="investment-card">
+                                <div>
+                                    <i class="fas fa-laptop-code" style="color: var(--cleartrip-blue); margin-right: 10px;"></i>
+                                    <strong>Technology Platform Development</strong>
+                                </div>
+                                <span class="investment-amount">₹2-3 Cr</span>
+                            </div>
+                            
+                            <div class="investment-card">
+                                <div>
+                                    <i class="fas fa-bullhorn" style="color: var(--cleartrip-blue); margin-right: 10px;"></i>
+                                    <strong>Marketing & Customer Acquisition</strong>
+                                </div>
+                                <span class="investment-amount">₹5-7 Cr</span>
+                            </div>
+                            
+                            <div class="investment-card">
+                                <div>
+                                    <i class="fas fa-users" style="color: var(--cleartrip-blue); margin-right: 10px;"></i>
+                                    <strong>Operational Team Scaling</strong>
+                                </div>
+                                <span class="investment-amount">₹1-2 Cr</span>
+                            </div>
+                            
+                            <div class="investment-card">
+                                <div>
+                                    <i class="fas fa-coins" style="color: var(--cleartrip-blue); margin-right: 10px;"></i>
+                                    <strong>Working Capital for Packages</strong>
+                                </div>
+                                <span class="investment-amount">₹10-15 Cr</span>
+                            </div>
+                            
+                            <div style="border-top: 2px solid var(--cleartrip-orange); padding-top: 15px; margin-top: 15px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <strong style="font-size: 18px;">Total Investment</strong>
+                                    <span style="font-size: 28px; font-weight: 900; color: var(--cleartrip-orange);">₹18-27 Cr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px;">
+                    <h3 style="text-align: center; margin-bottom: 20px;"><i class="fas fa-chart-line" style="color: var(--cleartrip-orange);"></i> Break-even Analysis</h3>
+                    
+                    <div class="breakeven-timeline">
+                        <div class="timeline-marker" style="left: 0;">0</div>
+                        <div class="timeline-marker" style="left: 25%;">6M</div>
+                        <div class="timeline-marker" style="left: 50%;">12M</div>
+                        <div class="timeline-marker" style="left: 75%; border-color: var(--cleartrip-blue);">18M</div>
+                        <div class="timeline-marker" style="right: 0; border-color: var(--cleartrip-blue);">24M</div>
+                    </div>
+                    
+                    <div class="three-column" style="text-align: center; margin-top: 30px;">
+                        <div>
+                            <p style="font-size: 14px; color: #666;">Investment Phase</p>
+                            <p style="font-weight: 700;">0-18 Months</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 14px; color: #666;">Break-even Target</p>
+                            <p style="font-weight: 700; color: var(--cleartrip-orange);">18-24 Months</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 14px; color: #666;">Profitability</p>
+                            <p style="font-weight: 700; color: var(--cleartrip-blue);">24+ Months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-15.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 16 of 22</span>
+            <a href="slide-17.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 3 - Market Deep Dive | Cleartrip Holiday Strategy</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/jpeg" href="../images/cleartrip-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .market-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .split-card {
+            background: var(--cleartrip-white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+        }
+        .split-value {
+            font-size: 48px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+        .domestic { color: var(--cleartrip-blue); }
+        .international { color: var(--cleartrip-orange); }
+        .online { color: #2ECC71; }
+        .offline { color: #E74C3C; }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../images/cleartrip-logo.jpg" alt="Cleartrip Logo">
+            </div>
+            
+            <!-- Slide Header -->
+            <div class="slide-header">
+                <div>
+                    <h1 class="slide-title">India Holiday Market Deep Dive</h1>
+                    <p class="slide-subtitle">Market Segmentation & Opportunity Analysis</p>
+                </div>
+            </div>
+            
+            <!-- Slide Content -->
+            <div class="slide-content">
+                <div class="metric-box fade-in" style="max-width: 600px; margin: 0 auto 40px;">
+                    <h2 style="color: white; margin-bottom: 10px;">Total Holiday Market Size</h2>
+                    <div class="metric-value" data-value="87000" data-prefix="₹" data-suffix=" Cr">0</div>
+                    <div class="metric-label">~$10.7 billion USD</div>
+                </div>
+                
+                <div class="two-column">
+                    <div>
+                        <h3 class="fade-in delayed-1">Market Split Analysis</h3>
+                        
+                        <div class="market-split fade-in delayed-2">
+                            <div class="split-card">
+                                <i class="fas fa-home" style="font-size: 32px; color: var(--cleartrip-blue);"></i>
+                                <div class="split-value domestic">45%</div>
+                                <p>Domestic Travel</p>
+                            </div>
+                            <div class="split-card">
+                                <i class="fas fa-globe" style="font-size: 32px; color: var(--cleartrip-orange);"></i>
+                                <div class="split-value international">55%</div>
+                                <p>International Travel</p>
+                            </div>
+                        </div>
+                        
+                        <div class="market-split fade-in delayed-3">
+                            <div class="split-card">
+                                <i class="fas fa-laptop" style="font-size: 32px; color: #2ECC71;"></i>
+                                <div class="split-value online">36%</div>
+                                <p>Online Bookings</p>
+                            </div>
+                            <div class="split-card">
+                                <i class="fas fa-store" style="font-size: 32px; color: #E74C3C;"></i>
+                                <div class="split-value offline">64%</div>
+                                <p>Offline Bookings</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="fade-in delayed-1">Key Players Distribution</h3>
+                        <div class="chart-container fade-in delayed-2" style="height: 300px;">
+                            <canvas id="market-segment-chart"></canvas>
+                        </div>
+                        
+                        <div class="info-card fade-in delayed-3" style="margin-top: 20px;">
+                            <h4 style="color: var(--cleartrip-blue);">15% - Prominent Travel Agents</h4>
+                            <p style="font-size: 14px;">₹13,050 crores</p>
+                            <p style="font-size: 12px; color: #666;">MMT, Thomas Cook, Cox & Kings, Veena World, SOTC, Kesari, Akbar, Riya</p>
+                        </div>
+                        
+                        <div class="info-card fade-in delayed-3" style="background: var(--cleartrip-light-grey);">
+                            <h4 style="color: var(--cleartrip-orange);">85% - Target Market</h4>
+                            <p style="font-size: 14px;"><strong>₹73,950 crores</strong></p>
+                            <p style="font-size: 12px;">4,000+ agents PAN India - <strong>Our Addressable Market</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card fade-in delayed-3" style="margin-top: 30px; text-align: center; background: var(--gradient-primary); color: white;">
+                    <h3 style="color: white;"><i class="fas fa-bullseye"></i> MMT Holiday Business Benchmark</h3>
+                    <div class="three-column" style="margin-top: 20px;">
+                        <div>
+                            <p class="large-text" style="color: white; font-weight: 700;">₹2,000 Cr</p>
+                            <p style="opacity: 0.9;">Annual Revenue</p>
+                        </div>
+                        <div>
+                            <p class="large-text" style="color: white; font-weight: 700;">₹900 Cr</p>
+                            <p style="opacity: 0.9;">Domestic</p>
+                        </div>
+                        <div>
+                            <p class="large-text" style="color: white; font-weight: 700;">₹1,100 Cr</p>
+                            <p style="opacity: 0.9;">International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Footer -->
+        <div class="nav-footer">
+            <a href="slide-2.html" class="nav-button secondary" id="prev-button">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <span class="slide-indicator" id="slide-indicator">Slide 3 of 22</span>
+            <a href="slide-4.html" class="nav-button" id="next-button">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
