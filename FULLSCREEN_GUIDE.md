@@ -1,7 +1,7 @@
 # Fullscreen Presentation Mode Guide
 
 ## Overview
-The Cleartrip Holiday Business Strategy presentation now includes comprehensive fullscreen functionality across all slides.
+The Cleartrip Holiday Business Strategy presentation now includes comprehensive fullscreen functionality across all slides with persistent fullscreen state during navigation.
 
 ## How to Use Fullscreen Mode
 
@@ -19,18 +19,32 @@ The Cleartrip Holiday Business Strategy presentation now includes comprehensive 
 - Press **Escape** key to exit fullscreen mode
 - Arrow keys continue to work for navigation in fullscreen
 
+## Persistent Fullscreen Navigation
+**NEW**: Fullscreen mode now persists when navigating between slides!
+- When you click Next/Previous buttons in fullscreen, the presentation stays in fullscreen
+- Arrow key navigation also maintains fullscreen state
+- Touch gestures on mobile maintain fullscreen
+- Fullscreen only exits when you explicitly:
+  - Click "Exit Fullscreen" button
+  - Press Escape key
+  - Use browser's exit fullscreen gesture
+
 ## Implementation Details
 
 ### JavaScript (navigation.js)
 ```javascript
-// Toggle fullscreen function
-function toggleFullscreen() {
-  if (!document.fullscreenElement) {
-    // Enter fullscreen
+// Store fullscreen state before navigation
+function storeFullscreenState() {
+  if (document.fullscreenElement) {
+    sessionStorage.setItem('wasFullscreen', 'true');
+  }
+}
+
+// Restore fullscreen after page load
+function restoreFullscreenIfNeeded() {
+  const wasFullscreen = sessionStorage.getItem('wasFullscreen');
+  if (wasFullscreen === 'true') {
     document.documentElement.requestFullscreen();
-  } else {
-    // Exit fullscreen
-    document.exitFullscreen();
   }
 }
 ```
@@ -41,21 +55,26 @@ function toggleFullscreen() {
 3. **Visual Feedback**: Button text changes between "Fullscreen" and "Exit Fullscreen"
 4. **Keyboard Support**: F key toggles fullscreen, Escape exits
 5. **Seamless Navigation**: All navigation features work in fullscreen mode
+6. **Persistent State**: Fullscreen mode persists across slide transitions using sessionStorage
 
 ### Navigation in Fullscreen
-- **Arrow Keys**: Navigate between slides
-- **Home Key**: Return to index page
-- **Escape Key**: Exit fullscreen (or return home if not in fullscreen)
-- **Touch Gestures**: Swipe left/right on mobile devices
+- **Arrow Keys**: Navigate between slides (maintains fullscreen)
+- **Home Key**: Return to index page (maintains fullscreen)
+- **Escape Key**: Exit fullscreen
+- **Touch Gestures**: Swipe left/right on mobile devices (maintains fullscreen)
+- **Next/Previous Buttons**: Navigate while staying in fullscreen
 
 ## Best Practices for Presenting
 1. Start from the index page and click "Present Fullscreen"
 2. Use arrow keys for smooth navigation
-3. Press F to quickly toggle fullscreen during presentation
-4. The presentation maintains all animations and interactive elements in fullscreen
+3. The presentation will stay in fullscreen throughout your entire presentation
+4. Only press Escape or click "Exit Fullscreen" when you're done presenting
 
 ## Browser Compatibility
-- Chrome/Edge: Full support
-- Firefox: Full support
+- Chrome/Edge: Full support with automatic fullscreen restoration
+- Firefox: Full support with automatic fullscreen restoration
 - Safari: Full support (webkit prefix handled)
-- Mobile browsers: Touch gestures supported 
+- Mobile browsers: Touch gestures supported (fullscreen behavior may vary by browser)
+
+## Note on Browser Security
+Some browsers may require user interaction to enter fullscreen mode. If automatic fullscreen restoration is blocked after navigation, you can quickly press 'F' to re-enter fullscreen mode. 

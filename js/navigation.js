@@ -10,14 +10,43 @@ function getCurrentSlide() {
 // Total number of slides
 const TOTAL_SLIDES = 22;
 
+// Store fullscreen state before navigation
+function storeFullscreenState() {
+  if (document.fullscreenElement) {
+    sessionStorage.setItem('wasFullscreen', 'true');
+  } else {
+    sessionStorage.removeItem('wasFullscreen');
+  }
+}
+
 // Navigate to a specific slide
 function navigateToSlide(slideNumber) {
   if (slideNumber >= 0 && slideNumber <= TOTAL_SLIDES) {
+    // Store fullscreen state before navigation
+    storeFullscreenState();
+    
     if (slideNumber === 0) {
       window.location.href = '../index.html';
     } else {
       window.location.href = `slide-${slideNumber}.html`;
     }
+  }
+}
+
+// Restore fullscreen if it was active
+function restoreFullscreenIfNeeded() {
+  const wasFullscreen = sessionStorage.getItem('wasFullscreen');
+  if (wasFullscreen === 'true') {
+    // Small delay to ensure page is fully loaded
+    setTimeout(() => {
+      if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.log('Auto-fullscreen blocked:', err);
+          // Clear the flag if auto-fullscreen is blocked
+          sessionStorage.removeItem('wasFullscreen');
+        });
+      }
+    }, 100);
   }
 }
 
@@ -74,15 +103,20 @@ function initNavigation() {
   // Keyboard navigation
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && currentSlide > 0) {
+      storeFullscreenState();
       navigateToSlide(currentSlide - 1);
     } else if (e.key === 'ArrowRight' && currentSlide < TOTAL_SLIDES) {
+      storeFullscreenState();
       navigateToSlide(currentSlide + 1);
     } else if (e.key === 'Home') {
+      storeFullscreenState();
       navigateToSlide(0);
     } else if (e.key === 'Escape') {
       if (document.fullscreenElement) {
         document.exitFullscreen();
+        sessionStorage.removeItem('wasFullscreen');
       } else {
+        storeFullscreenState();
         navigateToSlide(0);
       }
     } else if (e.key === 'f' || e.key === 'F') {
@@ -96,18 +130,24 @@ function toggleFullscreen() {
   if (!document.fullscreenElement) {
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
+      sessionStorage.setItem('wasFullscreen', 'true');
     } else if (document.documentElement.webkitRequestFullscreen) {
       document.documentElement.webkitRequestFullscreen();
+      sessionStorage.setItem('wasFullscreen', 'true');
     } else if (document.documentElement.msRequestFullscreen) {
       document.documentElement.msRequestFullscreen();
+      sessionStorage.setItem('wasFullscreen', 'true');
     }
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
+      sessionStorage.removeItem('wasFullscreen');
     } else if (document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
+      sessionStorage.removeItem('wasFullscreen');
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
+      sessionStorage.removeItem('wasFullscreen');
     }
   }
 }
@@ -308,16 +348,21 @@ function handleGesture() {
   const currentSlide = getCurrentSlide();
   
   if (touchEndX < touchStartX - 50 && currentSlide < TOTAL_SLIDES) {
+    storeFullscreenState(); // Store state before navigation
     navigateToSlide(currentSlide + 1);
   }
   
   if (touchEndX > touchStartX + 50 && currentSlide > 0) {
+    storeFullscreenState(); // Store state before navigation
     navigateToSlide(currentSlide - 1);
   }
 }
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+  // Restore fullscreen state if needed
+  restoreFullscreenIfNeeded();
+  
   initNavigation();
   animateElements();
   initSmoothScroll();
@@ -351,8 +396,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (presentButton) {
       if (document.fullscreenElement) {
         presentButton.innerHTML = '<i class="fas fa-compress"></i> Exit Fullscreen';
+        sessionStorage.setItem('wasFullscreen', 'true');
       } else {
         presentButton.innerHTML = '<i class="fas fa-expand"></i> ' + (getCurrentSlide() === 0 ? 'Present Fullscreen' : 'Fullscreen');
+        sessionStorage.removeItem('wasFullscreen');
+      }
+    }
+  });
+  
+  // Also handle webkit fullscreen change event for Safari
+  document.addEventListener('webkitfullscreenchange', () => {
+    const presentButton = document.getElementById('present-button');
+    if (presentButton) {
+      if (document.webkitFullscreenElement) {
+        presentButton.innerHTML = '<i class="fas fa-compress"></i> Exit Fullscreen';
+        sessionStorage.setItem('wasFullscreen', 'true');
+      } else {
+        presentButton.innerHTML = '<i class="fas fa-expand"></i> ' + (getCurrentSlide() === 0 ? 'Present Fullscreen' : 'Fullscreen');
+        sessionStorage.removeItem('wasFullscreen');
       }
     }
   });

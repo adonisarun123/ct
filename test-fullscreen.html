@@ -35,10 +35,21 @@
             padding: 2px 6px;
             border-radius: 3px;
         }
+        .new-feature {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <h1>Fullscreen Functionality Test</h1>
+    
+    <div class="new-feature">
+        <h3>✨ NEW: Persistent Fullscreen Navigation</h3>
+        <p>Fullscreen mode now stays active when navigating between slides! No more exiting fullscreen when you click Next or use arrow keys.</p>
+    </div>
     
     <div class="test-section">
         <h2>Test Instructions</h2>
@@ -46,8 +57,14 @@
             <li>Open the presentation at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></li>
             <li>Test fullscreen from the index page using the "Present Fullscreen" button</li>
             <li>Navigate to any slide (e.g., <a href="slides/slide-1.html" target="_blank">Slide 1</a>)</li>
-            <li>Check that the "Fullscreen" button appears in the navigation footer</li>
-            <li>Press <code>F</code> key to toggle fullscreen</li>
+            <li>Enter fullscreen mode (F key or Fullscreen button)</li>
+            <li><strong>Test persistent navigation:</strong>
+                <ul>
+                    <li>Click Next button - should stay in fullscreen</li>
+                    <li>Press Arrow keys - should stay in fullscreen</li>
+                    <li>Use touch gestures - should stay in fullscreen</li>
+                </ul>
+            </li>
             <li>Press <code>Escape</code> to exit fullscreen</li>
         </ol>
     </div>
@@ -61,12 +78,15 @@
             <li>✅ Escape key exits fullscreen</li>
             <li>✅ Arrow keys work for navigation in fullscreen</li>
             <li>✅ All animations and transitions work in fullscreen</li>
+            <li>✅ <strong>NEW:</strong> Fullscreen persists when navigating between slides</li>
+            <li>✅ <strong>NEW:</strong> SessionStorage maintains fullscreen state across page loads</li>
         </ul>
     </div>
     
     <div class="test-section">
         <h2>Quick Test</h2>
         <button class="button" onclick="testFullscreen()">Test Fullscreen API</button>
+        <button class="button" onclick="checkSessionStorage()">Check Session Storage</button>
         <p id="result"></p>
     </div>
     
@@ -79,6 +99,18 @@
             } else {
                 result.textContent = '❌ Fullscreen API not supported';
                 result.style.color = 'red';
+            }
+        }
+        
+        function checkSessionStorage() {
+            const result = document.getElementById('result');
+            const wasFullscreen = sessionStorage.getItem('wasFullscreen');
+            if (wasFullscreen === 'true') {
+                result.textContent = '✅ Fullscreen state is stored in session: ' + wasFullscreen;
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'ℹ️ No fullscreen state in session storage';
+                result.style.color = 'blue';
             }
         }
     </script>
