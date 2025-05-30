@@ -33,6 +33,19 @@ function initNavigation() {
     slideIndicator.textContent = `Slide ${currentSlide} of ${TOTAL_SLIDES}`;
   }
   
+  // Add fullscreen button for slides
+  if (currentSlide > 0) {
+    const navFooter = document.querySelector('.nav-footer');
+    if (navFooter && !document.getElementById('present-button')) {
+      const presentButton = document.createElement('button');
+      presentButton.id = 'present-button';
+      presentButton.className = 'nav-button secondary';
+      presentButton.innerHTML = '<i class="fas fa-expand"></i> Fullscreen';
+      presentButton.style.marginRight = 'auto';
+      navFooter.insertBefore(presentButton, navFooter.firstChild);
+    }
+  }
+  
   // Handle previous button
   if (prevButton) {
     if (currentSlide <= 1) {
@@ -67,9 +80,36 @@ function initNavigation() {
     } else if (e.key === 'Home') {
       navigateToSlide(0);
     } else if (e.key === 'Escape') {
-      navigateToSlide(0);
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        navigateToSlide(0);
+      }
+    } else if (e.key === 'f' || e.key === 'F') {
+      toggleFullscreen();
     }
   });
+}
+
+// Toggle fullscreen function
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
 }
 
 // Animate elements on page load
@@ -301,18 +341,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const presentButton = document.getElementById('present-button');
   if (presentButton) {
     presentButton.addEventListener('click', () => {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen();
-      }
+      toggleFullscreen();
     });
   }
   
-  // Exit fullscreen on Escape
+  // Update button text on fullscreen change
   document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-      // Exited fullscreen
+    const presentButton = document.getElementById('present-button');
+    if (presentButton) {
+      if (document.fullscreenElement) {
+        presentButton.innerHTML = '<i class="fas fa-compress"></i> Exit Fullscreen';
+      } else {
+        presentButton.innerHTML = '<i class="fas fa-expand"></i> ' + (getCurrentSlide() === 0 ? 'Present Fullscreen' : 'Fullscreen');
+      }
     }
   });
 });
